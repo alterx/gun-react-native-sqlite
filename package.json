@@ -1,6 +1,6 @@
 {
     "name": "gun-react-native-sqlite",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": "sjones6",
     "main": "index.js",
     "description": "A Gun <> SQLite Adapter for React Native",
