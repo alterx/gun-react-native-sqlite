@@ -263,7 +263,8 @@ export default class BaseAdapter {
      * @param {object} context  Gun write context
      */
     _write(context) {
-        const { put: delta, '#': dedupId } = context;
+        const {'#': dedupId } = context;
+        const delta = context._.put
 
         // Filter out returns from the `get` requests
         if (this._shouldWrite(context['@'])) {
