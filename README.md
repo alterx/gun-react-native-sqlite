@@ -2,6 +2,8 @@
 
 A Gun <> SQLite Adapter for React Native apps to enable long-term storage for Gun data.
 
+This is an updated fork of the [original package](https://github.com/sjones6/gun-react-native-sqlite) by sjones6.
+
 ## Installation
 
 `npm install gun-react-native-sqlite --save` or `yarn add gun-react-native-sqlite`.
@@ -75,3 +77,6 @@ Contributions welcome on [GitHub](https://github.com/sjones6/gun-react-native-sq
 ## Issues
 
 Issues welcome on [GitHub](https://github.com/sjones6/gun-react-native-sqlite).
+
+## Credits
+All credit for building this

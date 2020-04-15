@@ -1,9 +1,13 @@
 {
-    "name": "gun-react-native-sqlite",
+    "name": "@lolotrgeek/gun-react-native-sqlite",
     "version": "0.0.2",
-    "author": "sjones6",
+    "author": "lolotrgeek",
     "main": "index.js",
     "description": "A Gun <> SQLite Adapter for React Native",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lolotrgeek/gun-react-native-sqlite"
+      },
     "keywords": [
         "GunJS", "SQLite", "React Native", "persistance", "graph"
     ],
