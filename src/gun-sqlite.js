@@ -83,7 +83,7 @@ const adapter = new KeyValAdapter({
             const keyField = `${node.key}_${node.field}`;
             return {
                 sql: `INSERT OR REPLACE INTO ${this.tableName} (keyField, key, field, val, rel, state, type) VALUES (?,?,?, COALESCE(?, ""),COALESCE(?, ""),COALESCE(?, 0),COALESCE(?, 3))`,
-                vars: [keyField, node.key, node.field, node.val + "", node.rel + "", node.state, coerce(node.val), keyField]
+                vars: [keyField, node.key, node.field, node.val + "", node.rel + "", node.state, coerce(node.val)]
             };
         });
 
