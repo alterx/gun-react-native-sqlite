@@ -266,14 +266,18 @@ export default class BaseAdapter {
         const {'#': dedupId } = context;
         const delta = context._.put
 
-        // Filter out returns from the `get` requests
-        if (this._shouldWrite(context['@'])) {
-            // Pass to child implementation
-            return this.write(delta, this.afterWrite.bind(this, dedupId));
-        } else {
+        if (context['@'] && delta) {
+            // Filter out returns from the `get` requests
+            if (this._shouldWrite(context['@'])) {
+                // Pass to child implementation
+                return this.write(delta, this.afterWrite.bind(this, dedupId));
+            } else {
 
-            // Acknowledge write
-            this.afterWrite(dedupId, null);
+                // Acknowledge write
+                this.afterWrite(dedupId, null);
+            }
+        } else {
+            // console.log('Ignoring Undefined Context')
         }
     }
 
