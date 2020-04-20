@@ -263,10 +263,10 @@ export default class BaseAdapter {
      * @param {object} context  Gun write context
      */
     _write(context) {
-        const {'#': dedupId } = context;
-        const delta = context._.put
-
-        if (context['@'] && delta) {
+        if (!context) return false
+        const { '#': dedupId } = context;
+        // Filter soulless deltas
+        if (context._.put && typeof context._.put === 'object') {
             // Filter out returns from the `get` requests
             if (this._shouldWrite(context['@'])) {
                 // Pass to child implementation
@@ -276,8 +276,6 @@ export default class BaseAdapter {
                 // Acknowledge write
                 this.afterWrite(dedupId, null);
             }
-        } else {
-            // console.log('Ignoring Undefined Context')
         }
     }
 
