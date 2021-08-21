@@ -1,5 +1,4 @@
 import KeyValAdapter from './key-val-adapter';
-import SQLite from 'react-native-sqlite-storage';
 import coerce from './coerce';
 import processRow from './process-row';
 
@@ -18,7 +17,7 @@ const adapter = new KeyValAdapter({
         // Acquire DB connection
         const sqlOpt = opt.sqlite || {};
         sqlOpt.onReady = opt.onReady || (() => {});
-        this.db = SQLite.openDatabase({
+        this.db = sqlOpt.SQLite.openDatabase({
                 name: sqlOpt.database_name || "GunDB.db",
                 location: sqlOpt.database_location || "default"
             },

@@ -10,8 +10,5 @@
       },
     "keywords": [
         "GunJS", "SQLite", "React Native", "persistance", "graph"
-    ],
-    "dependencies": {
-        "react-native-sqlite-storage": "^3.3.3"
-    }
+    ]
 }
